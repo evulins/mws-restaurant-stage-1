@@ -30,9 +30,21 @@ body {
 * {
   box-sizing: border-box;
 }
+<<<<<<< HEAD
 
 ul,
 li {
+||||||| merged common ancestors
+ul, li {
+=======
+
+* {
+  box-sizing: border-box;
+}
+
+ul,
+li {
+>>>>>>> 5263a735e43df3f6f402b9e11c9e8fad500c8bdd
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
 	color: #333;
