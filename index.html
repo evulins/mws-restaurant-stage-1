@@ -26,11 +26,11 @@
     <section id="restaurants">
       <div class="filter-options">
         <h2 tabindex="0">Filter Results</h2>
-        <label for="neighborhoods-select">Choose your neighborhood?</label>
+        <label for="neighborhoods-select">Choose your neighborhood</label>
         <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
-        <label for="cuisines-select">Choose your cuisine?</label>
+        <label for="cuisines-select">Choose your favourite cuisine</label>
         <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
@@ -49,7 +49,9 @@
     if('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js')
           .then(function() {
-                console.log('Service Worker Registered');
+            console.log('Service Worker Registered');
+          }).catch(function() {
+            console.log('Registration failed');
           });
       }
   </script>
