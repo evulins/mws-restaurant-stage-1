@@ -40,6 +40,7 @@ li {
 label {
   color: white;
   z-index: -3000;
+  width: 10%;
 }
 
 a {
@@ -98,7 +99,6 @@ div
   padding: 1rem;
   text-align: center;
   text-transform: uppercase;
-
 }
 
 #footer a {
@@ -175,31 +175,26 @@ nav h1 a {
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
-  min-height: 50px;
-  background-color: #125C96;
+  background-color: #252831;
   align-items: center;
-  justify-content: center;
-  display: flex;
 }
 .filter-options h2 {
   color: white;
   font-size: 1rem;
   font-weight: normal;
-  line-height: 2;
-  margin: 0 1rem;
-  padding-bottom: 0px;
+  line-height: 1;
+  margin: 0 20px;
 }
 .filter-options select {
   background-color: white;
   border: 1px solid #fff;
   font-family: Arial,sans-serif;
-  font-size: 1rem;
-  min-height: 48px;
+  font-size: 11pt;
+  height: 35px;
   letter-spacing: 0;
-  margin: 0.5rem;
-  padding: 0 0.5rem;
-  width: auto;
-}
+  margin: 10px 15px;
+  padding: 0 10px;
+ }
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants {
@@ -217,19 +212,24 @@ nav h1 a {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  justify-content: flex-start;
 }
+
 #restaurants-list li {
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
-  margin: 1rem;
-  padding: 0 1rem 1rem;
+  margin: 1rem 0.5rem 1rem 1.7rem;
+  padding: 0.5rem;
   text-align: left;
+  display: flex;
   width: 100%;
-  flex-grow: 1;
-  display: flex;                      
+}
+
+.restaurant-content {
+  display: flex;
   flex-direction: column;
+  padding: 1em;
+  width: 100%;
 }
 
 #restaurants-list .restaurant-img {
@@ -254,7 +254,7 @@ nav h1 a {
 #restaurants-list p {
   margin: 0;
   font-size: 1rem;
-  flex-grow: 1;
+  flex: 1 0 auto;
 }
 #restaurants-list li a {
   background-color: #791515;
@@ -318,7 +318,7 @@ nav h1 a {
 #restaurant-name {
   color: #791515;
   font-family: Arial,sans-serif;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 200;
   letter-spacing: 0;
   margin: 0.5rem 0 1rem;
@@ -411,13 +411,8 @@ nav h1 a {
 
 /* ====================== Breakpoints ====================== */
 
-@media screen and (max-width: 580px) {
-  .filter-options {
-    flex-direction: column;
-  }
-  .filter-options select {
-    width: 60%;
-  }
+@media all and (max-width: 580px) {
+  
   .filter-options h2 {
     font-size: 1.5rem;
   }
@@ -435,34 +430,52 @@ nav h1 a {
 
 }
 
-@media screen and (min-width: 580px) {
+@media all and (min-width: 580px) {
  
  /*Restaurant list*/
-  #restaurants-list li {
-    width: 30%;
-  }
+
+ #restaurants-list li {
+  width: 45%;
+  margin: 1rem 0 1rem 1.7rem;
+ }
 
   /*Restaurant details*/
   .inside #maincontent {
     display: flex;
     font-size: 1rem;
   }
-
-  .inside #map-container {
-    background: none repeat scroll 0 0;
-    height: 100%;
-    right: 0;
-    width: 50%;
+  .inside header {
     position: fixed;
   }
+  .inside #map-container {
+    background: none repeat scroll 0 0;
+    right: 0;
+    height: 100%;
+    position: fixed;
+    width: 50%;
+    margin-bottom: 2rem;
+  }
+
 
   #restaurant-container,
   #reviews-container {
     width: 50%;
+    position: relative;
+    top: 6.5rem;
+  }
+
+  #reviews-list {
+    margin-bottom: 2rem;
   }
 
   #reviews-list li p {
     font-size: 1rem;
+  }
+
+  .inside #footer {
+    margin-top: 4rem;
+    position: relative;
+    bottom: 0;
   }
 
   .filter-options h2 {
@@ -475,7 +488,8 @@ nav h1 a {
 }
 
 
-@media screen and (min-width: 850px) {
+@media all and (min-width: 850px) {
+  
   #maincontent,
   footer {
     margin-left: auto;
@@ -487,16 +501,7 @@ nav h1 a {
   }
 
   #restaurants-list li {
-    width: 25%;
-    justify-content: space-around;
-  }
-  #restaurants-list li:last-child {
-    width: 31%;
-    flex-grow: 0;
-}
-
-  .filter-options {
-    flex-direction: row;
+    width: 30%;
   }
 
 }
