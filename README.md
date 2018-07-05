@@ -8,9 +8,9 @@
 ### Specification
 
 I have been provided [the code](https://github.com/udacity/mws-restaurant-stage-1) for a restaurant reviews website with a lot of issues. I had to convert the provided site and use a responsive design. 
-- all responsiveness I've done with CSS,
-- I created a responsive grid-based layout using CSS,
-- I used media queries to provide fluid breakpoints across different screen sizes,
+- All responsiveness I've done with CSS.
+- I created a responsive grid-based layout using CSS.
+- I used media queries to provide fluid breakpoints across different screen sizes.
 - I implemented accessibility features in the site HTML.
 - I added a ServiceWorker.
 
