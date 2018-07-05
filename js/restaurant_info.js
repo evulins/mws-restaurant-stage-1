@@ -155,6 +155,7 @@ createReviewHTML = (review) => {
 
   const date = document.createElement('p');
   date.innerHTML = review.date;
+  date.classList.add('date');
   li.appendChild(date);
 
   const rating = document.createElement('p');
@@ -164,6 +165,7 @@ createReviewHTML = (review) => {
 
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
+  comments.classList.add('comment');
   li.appendChild(comments);
 
   return li;
