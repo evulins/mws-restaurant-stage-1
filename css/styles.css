@@ -41,6 +41,7 @@ label {
   color: white;
   z-index: -3000;
   width: 10%;
+  height: 0;
 }
 
 a {
@@ -81,6 +82,7 @@ div
 	box-sizing: border-box;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
 }
 
 #maincontent {
@@ -107,13 +109,13 @@ div
 /* ====================== Navigation ====================== */
 nav {
   width: 100%;
-  min-height: 5rem;
+  min-height: 4rem;
   background-color: #252831;
-  text-align:center;
 }
 
 nav h1 {
   margin: auto;
+  text-align:center;
 }
 
 nav h1 a {
@@ -125,7 +127,7 @@ nav h1 a {
 }
 
 #nav-breadcrumb {
-  min-height: 48px;
+  min-height: 1rem;
 }
 
 #breadcrumb {
@@ -135,7 +137,6 @@ nav h1 a {
     font-size: 1rem;
     margin: 0;
     width: 100%;
-    display: flex;
 }
 
 /* Display list items side by side */
@@ -181,6 +182,8 @@ nav h1 a {
   width: 100%;
   background-color: #252831;
   align-items: center;
+  display: flex;
+  padding: 1rem;
 }
 
 .filter-options h2 {
@@ -195,8 +198,8 @@ nav h1 a {
   background-color: white;
   border: 1px solid #fff;
   font-family: Arial,sans-serif;
-  font-size: 11pt;
-  height: 35px;
+  font-size: 1rem;
+  min-height: 48px;
   letter-spacing: 0;
   margin: 10px 15px;
   padding: 0 10px;
@@ -298,6 +301,9 @@ nav h1 a {
   z-index: 1000;
 }
 
+#nav-breadcrumb {
+  flex: 1 0 auto;
+}
 .inside #map-container {
   height: 400px;
   width: 100%;
@@ -445,7 +451,7 @@ nav h1 a {
   font-weight: 200;
   display: inline-flex;
   padding: 0.3rem;
-  width: 20%;
+  width: 25%;
   justify-content: center;
 }
 
@@ -457,10 +463,20 @@ nav h1 a {
 
 @media all and (max-width: 640px) {
 /* Breadcrumb */
+
+#breadcrumb {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
 #breadcrumb li {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 /* Restaurant Filtering */ 
+  .filter-options {
+    flex-direction: column;
+    align-items: normal;
+  }
   .filter-options h2 {
     font-size: 1.5rem;
   }
@@ -473,6 +489,7 @@ nav h1 a {
 /* Navigation */
   nav h1 a {
     font-size: 1.5rem;
+    padding: 1rem;
   }
 
 /* Restaurant details */
